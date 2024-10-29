@@ -1,14 +1,14 @@
-/*** Reset ***/
+/* RESET */
 
-html {
-  box-sizing: border-box;
-  font-size: 16px;
+body, html {
+  margin: 0;
+  padding: 0;
 }
 
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 body,
@@ -38,4 +38,127 @@ img {
 
 button:hover {
   cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* VARIABLES */
+:root {
+  /* Primary Theme Colors */
+  --theme-darker: #1a4c4c;
+  --theme-dark: #296262;
+  --theme-dark-alt: #3d7878;
+  --theme-primary: #0e3636;
+  --theme-secondary: #538e8e;
+  --theme-tertiary: #6ea4a4;
+  --theme-light: #8cbbbb;
+  --theme-lighter: #add1d1;
+  --theme-lighter-alt: #d2e7e7;
+
+  /* Neutral Colors */
+  --black: #474747;
+  --neutral-dark: #5e5e5e;
+  --neutral-primary: #313131;
+  --neutral-primary-alt: #8b8b8b;
+  --neutral-secondary: #a2a2a2;
+  --neutral-tertiary: #b9b9b9;
+  --neutral-tertiary-alt: #c8c8c8;
+  --neutral-quaternary-alt: #dadada;
+  --neutral-light: #eaeaea;
+  --neutral-lighter: #f4f4f4;
+  --neutral-lighter-alt: #f8f8f8;
+  --white: #ffffff;
+}
+
+/* FONTS */
+/* ICONS */
+/* ANIMATIONS */
+
+/* STYLES */
+/** Header **/
+.header {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.header-container {
+  margin: 0 auto;
+  padding: 2rem 0;
+  max-width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-list {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-list-item > a {
+  color: var(--white);
+}
+/** Main Content **/
+main {
+  background-color: var(--theme-light);
+}
+main section {
+  width: 100%;
+}
+.hero-container, .about-container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+/*** Hero ***/
+.hero-section {
+  padding: 8rem 0;
+}
+
+.hero-container {
+  background-color: var(--theme-dark);
+  display: flex;
+  gap: 2rem;
+  height: fit-content;
+  padding: 3rem;
+}
+
+.hero-description {
+  flex: 3;
+}
+
+.portrait {
+  text-align: center;
+  flex: 2;
+}
+
+/*** About ***/
+.title {
+  text-align: center;
+  margin-block-end: 3rem;
+}
+
+.about-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.description {
+  flex: 3;
+}
+
+/*** Projects ***/
+
+/** Footer **/
+
+
+/* Media Queries */
+@media (max-width: 600px) {
+
+  /** Header **/
+  .header-container {
+    max-width: 100%;
+    padding: 2rem;
+  }
 }
