@@ -1,5 +1,5 @@
 import './styles.css';
-import { Dropdown } from '@detrett/dropdown-menu';
+import { Dropdown } from './dropdown';
 
 const btnToggleTheme = document.querySelector('.btn-toggle-theme');
 const themeIcon = document.querySelector('.theme-icon');

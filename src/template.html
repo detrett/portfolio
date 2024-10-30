@@ -9,6 +9,9 @@
     <header class="header">
       <div class="header-container">
         <nav class="nav-menu">
+          <button aria-label="Toggle navigation menu" class="nav-toggle" aria-expanded="false">
+            <span class="hamburger"></span>
+          </button>
           <ul class="nav-list">
             <li class="nav-list-item">
               <a href="#" aria-current="page" tabindex="0">About</a>
@@ -17,19 +20,19 @@
             <li class="nav-list-item"><a href="#" tabindex="0">Contact</a></li>
           </ul>
         </nav>
-        <ul>
+        <ul class="btn-list">
           <li>
             <button aria-label="Toggle theme" class="btn-toggle-theme">
-              <div class="theme-icon"></div>
+              <span class="theme-icon"></span>
             </button>
           </li>
           <li>
             <div class="dropdown">
-              <button class="dropdown-action">Dropdown 1</button>
-              <ul class="dropdown-menu">
-                <li><a href="#">EN</a></li>
-                <li><a href="#">ES</a></li>
-                <li><a href="#">NO</a></li>
+              <button class="dropdown-action">EN</button>
+              <ul class="dropdown-menu" aria-expanded="false">
+                <li class="dropdown-item"><a href="#">EN</a></li>
+                <li class="dropdown-item"><a href="#">ES</a></li>
+                <li class="dropdown-item"><a href="#">NO</a></li>
               </ul>
             </div>
           </li>
