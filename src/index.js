@@ -9,3 +9,14 @@ btnToggleTheme.addEventListener('click', () => {
   themeIcon.classList.toggle('dark-theme');
 })
 
+// Make the navigation list into a dropdown menu, only on smaller devices.
+const navList = document.querySelector('.nav-list');
+const mediaQuery = window.matchMedia('(max-width: 600px)')
+
+mediaQuery.addEventListener('change', () => {
+  if(mediaQuery.matches) {
+    navList.classList.add('dropdown-menu');
+  } else {
+    navList.classList.remove('dropdown-menu');
+  }
+})

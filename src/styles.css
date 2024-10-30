@@ -102,10 +102,17 @@ body.dark-theme {
 
 /* FONTS */
 /* ICONS */
+.icon {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; 
+}
+
 .hamburger {
   display: block;
   width: 24px;
   height: 24px;
+  background-image: url(icons/menu.svg);
 }
 
 .theme-icon {
@@ -113,9 +120,6 @@ body.dark-theme {
   width: 24px;
   height: 24px;
   background-image: url(icons/sun2.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; 
 }
 .theme-icon.dark-theme {
   background-image: url(icons/moon1.svg);
