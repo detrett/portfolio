@@ -102,6 +102,18 @@ body.dark-theme {
 
 /* FONTS */
 /* ICONS */
+.theme-icon {
+  width: 24px;
+  height: 24px;
+  background-image: url(icons/sun2.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.theme-icon.dark-theme {
+  background-image: url(icons/moon1.svg);
+}
+
 /* ANIMATIONS */
 
 /* STYLES */
