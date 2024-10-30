@@ -17,7 +17,21 @@
             <li class="nav-list-item"><a href="#" tabindex="0">Contact</a></li>
           </ul>
         </nav>
-        <button aria-label="Toggle theme">Sun</button>
+        <ul>
+          <li>
+            <button aria-label="Toggle theme" class="btn-toggle-theme">Sun</button>
+          </li>
+          <li>
+            <div class="dropdown">
+              <button class="dropdown-action">Dropdown 1</button>
+              <ul class="dropdown-menu">
+                <li><a href="#">EN</a></li>
+                <li><a href="#">ES</a></li>
+                <li><a href="#">NO</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
       </div>
     </header>
 
@@ -29,31 +43,36 @@
             <h1>Alan Blanco</h1>
             <p>I am a fullstack developer based in Oslo</p>
           </div>
-          <div class="portrait">
-            IMAGE
-          </div>
+          <div class="image portrait">IMAGE</div>
         </div>
       </section>
 
       <section id="about" class="about-section">
-        <h2 class="title">About Me</h2>
+        <h2 class="title">About me</h2>
         <div class="about-container">
-          <div class="portrait">
-            IMAGE
+          <div class="description-subcontainer">
+            <div class="image portrait">IMAGE</div>
+            <div class="about-description">
+              <p>
+                I am a graduate in Anvendt datateknologi in Oslomet. During my
+                time as a student I developed a strong foundation in data
+                technology and its practical applications. My studies have
+                equipped me with skills in programming, data analysis, UX/user
+                design, and software development
+              </p>
+              <p>
+                I am passionate about becoming a fullstack developer to create
+                both beautiful and functional products. But whether it is
+                through web development, app development, or collaborative
+                projects, I am eager to contribute to the tech community with
+                quality and creativity as I continue my path of continuous
+                learning.
+              </p>
+            </div>
           </div>
-          <div class="description">
-            <p>
-              I am a graduate in Anvendt datateknologi in Oslomet. During my time
-              as a student I developed a strong foundation in data technology and
-              its practical applications. My studies have equipped me with skills
-              in programming, data analysis, UX/user design, and software
-              development
-            </p>
-            <p>
-              I am passionate about becoming a fullstack developer to create both beautiful and functional products.
-              But whether it is through web development, app development, or collaborative projects, I am eager to contribute to the tech community
-              with quality and creativity as I continue my path of continuous learning.
-            </p>
+          <div class="location-subcontainer">
+            <div class="icon">ICON</div>
+            <p>Oslo, Norway / Cádiz, Spain</p>
           </div>
         </div>
       </section>
@@ -62,21 +81,21 @@
         <h2 class="title">Projects</h2>
         <div class="projects-container">
           <div class="project-card">
-            <div>IMAGE</div>
+            <div class="image">IMAGE</div>
             <h3>Project title</h3>
             <p>Project description</p>
             <button>Github link</button>
           </div>
 
           <div class="project-card">
-            <div>IMAGE</div>
+            <div class="image">IMAGE</div>
             <h3>Project title</h3>
             <p>Project description</p>
             <button>Github link</button>
           </div>
 
           <div class="project-card">
-            <div>IMAGE</div>
+            <div class="image">IMAGE</div>
             <h3>Project title</h3>
             <p>Project description</p>
             <button>Github link</button>
@@ -85,8 +104,34 @@
       </section>
 
       <section id="contact" class="contact-section">
-        <h2 class="title"> Contact Me</h2>
+        <h2 class="title">Get in touch</h2>
+        <div class="contact-container">
+          <div class="contact-email contact-subcontainer">
+            <div class="icon">ICON</div>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:alanalquezar@gmail.com">alanalquezar@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-github contact-subcontainer">
+            <div class="icon">ICON</div>
+            <div>
+              <h4>Github</h4>
+              <a href="#">detrett</a>
+            </div>
+          </div>
+          <div class="contact-linkedin contact-subcontainer">
+            <div class="icon">ICON</div>
+            <div>
+              <h4>LinkedIn</h4>
+              <a href="#">Alan Blanco</a>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
+    <footer>
+      <p>© 2024 Alan Blanco</p>
+    </footer>
   </body>
 </html>
