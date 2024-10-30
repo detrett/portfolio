@@ -103,26 +103,27 @@ body.dark-theme {
 /* FONTS */
 /* ICONS */
 .icon {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; 
-}
-
-.hamburger {
   display: block;
   width: 24px;
   height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hamburger {
   background-image: url(icons/menu.svg);
 }
 
 .theme-icon {
-  display: block;
-  width: 24px;
-  height: 24px;
   background-image: url(icons/sun2.svg);
 }
 .theme-icon.dark-theme {
   background-image: url(icons/moon1.svg);
+}
+
+.lang-icon {
+  background-image: url(icons/lang.svg);
 }
 
 /* ANIMATIONS */
@@ -145,6 +146,7 @@ body.dark-theme {
   flex: 2;
 }
 
+.header-container,
 .hero-container,
 .about-container,
 .projects-container,
@@ -160,9 +162,7 @@ body.dark-theme {
 }
 
 .header-container {
-  margin: 0 auto;
   padding: 2rem 0;
-  max-width: 60%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -204,6 +204,11 @@ body.dark-theme {
 .dropdown-menu.active {
   display: block;
   position: fixed;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
 }
 
 /** Main Content **/
@@ -296,9 +301,44 @@ footer {
 
 /* Media Queries */
 @media (max-width: 600px) {
+  /** Common **/
+  .header-container,
+  .hero-container,
+  .about-container,
+  .projects-container,
+  .contact-container {
+    width: 85%;
+    margin: 0 auto;
+  }
+
   /** Header **/
+  /* Move header to the bottom of the screen for mobile devices,
+  turn nav list into a collapsible menu */
+  header {
+    position: fixed;
+    top: initial;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .header-container {
+    padding: 1rem 0;
+  }
+
   .nav-toggle {
     display: block;
+  }
+
+  .nav-list.dropdown-menu.active,
+  .lang-list.dropdown-menu.active {
+    background-color: var(--neutral-dark);
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 4.5rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
   }
 
   /** Main Content **/

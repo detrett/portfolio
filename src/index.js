@@ -13,10 +13,14 @@ btnToggleTheme.addEventListener('click', () => {
 const navList = document.querySelector('.nav-list');
 const mediaQuery = window.matchMedia('(max-width: 600px)')
 
-mediaQuery.addEventListener('change', () => {
+const checkMediaForNav = function() {
   if(mediaQuery.matches) {
     navList.classList.add('dropdown-menu');
   } else {
     navList.classList.remove('dropdown-menu');
   }
-})
+}
+
+checkMediaForNav();
+
+mediaQuery.addEventListener('change', checkMediaForNav)
