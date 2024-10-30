@@ -116,10 +116,8 @@ body.dark-theme {
 }
 
 .theme-icon {
-  background-image: url(icons/sun2.svg);
-}
-.theme-icon.dark-theme {
-  background-image: url(icons/moon1.svg);
+  background-image: url(./icons/sun2.svg);
+  transform-origin: 50% 150%;
 }
 
 .lang-icon {
@@ -127,6 +125,34 @@ body.dark-theme {
 }
 
 /* ANIMATIONS */
+.leave {
+  animation: leave 0.5s forwards;
+}
+
+.enter {
+  animation: enter 0.5s forwards;
+}
+
+@keyframes leave {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes enter {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
 
 /* STYLES */
 /** Common **/
@@ -301,6 +327,10 @@ footer {
 
 /* Media Queries */
 @media (max-width: 600px) {
+  body {
+    margin-block-end: 4.5rem;
+  }
+
   /** Common **/
   .header-container,
   .hero-container,
@@ -316,7 +346,6 @@ footer {
   turn nav list into a collapsible menu */
   header {
     position: fixed;
-    top: initial;
     bottom: 0;
     width: 100%;
   }
