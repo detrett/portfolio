@@ -10,7 +10,7 @@ btnToggleTheme.addEventListener('click', () => {
   document.body.classList.toggle('dark-theme');
 
   const currentIcon = window.getComputedStyle(themeIcon).backgroundImage;
-  
+
   themeIcon.classList.remove('enter');
   themeIcon.classList.add('leave');
 
@@ -31,7 +31,7 @@ btnToggleTheme.addEventListener('click', () => {
 
 // Make the navigation list into a dropdown menu, only on smaller devices.
 const navList = document.querySelector('.nav-list');
-const mediaQuery = window.matchMedia('(max-width: 600px)')
+const mediaQuery = window.matchMedia('(max-width: 1000px)')
 
 const checkMediaForNav = function() {
   if(mediaQuery.matches) {
