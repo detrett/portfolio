@@ -9,15 +9,23 @@
     <header class="header">
       <div class="header-container">
         <nav class="nav-menu">
-          <button aria-label="Toggle navigation menu" class="nav-toggle dropdown-action" aria-expanded="false">
+          <button
+            aria-label="Toggle navigation menu"
+            class="nav-toggle dropdown-action"
+            aria-expanded="false"
+          >
             <span class="hamburger icon"></span>
           </button>
           <ul class="nav-list">
             <li class="nav-list-item">
               <a href="#about" aria-current="page" tabindex="0">About</a>
             </li>
-            <li class="nav-list-item"><a href="#projects" tabindex="0">Projects</a></li>
-            <li class="nav-list-item"><a href="#contact" tabindex="0">Contact</a></li>
+            <li class="nav-list-item">
+              <a href="#projects" tabindex="0">Projects</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#contact" tabindex="0">Contact</a>
+            </li>
           </ul>
         </nav>
         <ul class="btn-list">
@@ -89,8 +97,9 @@
       <section id="projects" class="projects-section" tabindex="0">
         <h2 class="title">Projects</h2>
         <div class="projects-container">
+
           <div class="project-card">
-            <div class="image weather-project">IMAGE</div>
+            <img src="images/weather-app.png" alt="" />
             <div class="project-title">
               <h3>Weather forecast</h3>
               <div class="project-links">
@@ -98,31 +107,34 @@
                 <a href=""><span class="icon external-link"></span></a>
               </div>
             </div>
-            <p>A dynamic web application that uses a weather API and geolocation API to display the weather forecast.</p>
+            <p>
+              A dynamic web application that uses a weather API and geolocation
+              API to display the weather forecast.
+            </p>
           </div>
 
           <div class="project-card">
-            <div class="image project-image">IMAGE</div>
+            <img src="images/battleships.png" alt="" />
             <div class="project-title">
-              <h3>Weather forecast</h3>
               <div class="project-links">
+                <h3>Battleships game</h3>
                 <a href=""><span class="icon github-small"></span></a>
                 <a href=""><span class="icon external-link"></span></a>
-              </div>            </div>
-            <p>Project description</p>
-            <button>Github link</button>
+              </div>
+            </div>
+            <p>The classic game of battleships against an AI made using Javascript</p>
           </div>
 
           <div class="project-card">
-            <div class="image project-image">IMAGE</div>
+            <img src="images/todo-list.png" alt="" />
             <div class="project-title">
-              <h3>Weather forecast</h3>
+              <h3>To-do list</h3>
               <div class="project-links">
                 <a href=""><span class="icon github-small"></span></a>
                 <a href=""><span class="icon external-link"></span></a>
-              </div>            </div>
-            <p>Project description</p>
-            <button>Github link</button>
+              </div>
+            </div>
+            <p>A simple todo-list implementation on the web.</p>
           </div>
         </div>
       </section>
