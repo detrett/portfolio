@@ -49,7 +49,7 @@ a {
 /* VARIABLES */
 body {
   /* Primary Theme Colors */
-  --theme-darker: hwb(54 20% 44%);
+  --theme-darker: #8f8633;
   --theme-dark: #c2b546;
   --theme-dark-alt: #e6d753;
   --theme-primary: #ffef5c;
@@ -126,6 +126,11 @@ body.dark-theme {
   background-image: url(icons/menu.svg);
 }
 
+body.dark-theme .hamburger {
+  filter: invert(99%) sepia(0%) saturate(1306%) hue-rotate(56deg)
+    brightness(115%) contrast(100%);
+}
+
 .theme-icon {
   background-image: url(./icons/sun2.svg);
   transform-origin: 50% 150%;
@@ -143,6 +148,26 @@ body.dark-theme {
     brightness(115%) contrast(100%);
 }
 
+.external-link {
+  background-image: url(icons/external.svg);
+}
+body.dark-theme .external-link {
+  filter: invert(99%) sepia(0%) saturate(1306%) hue-rotate(56deg)
+    brightness(115%) contrast(100%);
+}
+
+.external-link:hover,
+.github-small:hover {
+  filter: invert(49%) sepia(66%) saturate(382%) hue-rotate(17deg)
+    brightness(91%) contrast(90%);
+}
+
+body.dark-theme .external-link:hover,
+body.dark-theme .github-small:hover {
+  filter: invert(80%) sepia(98%) saturate(322%) hue-rotate(348deg)
+    brightness(94%) contrast(91%);
+}
+
 .mail-icon {
   width: 48px;
   height: 48px;
@@ -155,6 +180,10 @@ body.dark-theme {
   background-image: url(icons/github-mark.svg);
 }
 
+.github-small {
+  background-image: url(icons/github-mark.svg);
+}
+
 .linkedin-icon {
   width: 48px;
   height: 48px;
@@ -163,15 +192,22 @@ body.dark-theme {
 
 body.dark-theme .mail-icon {
   z-index: 0;
-  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(153deg) brightness(100%) contrast(103%);
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(153deg)
+    brightness(100%) contrast(103%);
 }
 
 body.dark-theme .github-icon {
-  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(153deg) brightness(100%) contrast(103%);
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(153deg)
+    brightness(100%) contrast(103%);
+}
+body.dark-theme .github-small {
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(153deg)
+    brightness(100%) contrast(103%);
 }
 
 body.dark-theme .linkedin-icon {
-  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(153deg) brightness(100%) contrast(103%);
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(153deg)
+    brightness(100%) contrast(103%);
 }
 
 /* ANIMATIONS */
@@ -476,6 +512,7 @@ main section {
 }
 
 .projects-container {
+  color: var(--black);
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
@@ -490,6 +527,20 @@ main section {
   max-width: 400px;
   background-color: var(--white);
 }
+
+.project-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* .weather-project {
+  background-image: url();
+} */
 
 /*** Contact ***/
 .contact-container {
@@ -512,7 +563,7 @@ main section {
   align-items: center;
 }
 .contact-info a {
-  color: var(--theme-darker)
+  color: var(--theme-darker);
 }
 
 .contact-info a:hover {
