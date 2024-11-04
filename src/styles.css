@@ -256,6 +256,12 @@ body.dark-theme .linkedin-icon {
   }
 }
 
+@keyframes flip {
+  50% {
+    transform: rotateY(90deg)
+  }
+}
+
 /* STYLES */
 /** Common **/
 body {

@@ -8,12 +8,68 @@ const themeIcon = document.querySelector(".theme-icon");
 const langIcon = document.querySelector(".lang-icon");
 const highlight = document.querySelector(".highlight");
 
+// Spinning icons
+let lastMouseX = 0;
+let lastMouseY = 0;
+let lastMouseTime = 0;
+const spinningIcons = document.querySelectorAll(".spinning-icon");
+
+spinningIcons.forEach(element => {
+  element.addEventListener("mouseenter", (e) => {
+    lastMouseX = e.clientX;
+    lastMouseY = e.clientY;
+    lastMouseTime = Date.now();
+  });
+
+  element.addEventListener('mouseleave', (e) => {
+    const deltaX = e.clientX - lastMouseX;
+    const deltaY = e.clientY - lastMouseY;
+    const deltaTime = Date.now() - lastMouseTime;
+  
+    const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+    const velocity = distance / deltaTime;
+  
+    const duration = Math.max(0.2, Math.min(1.75, 1 / velocity));
+    const iterations = Math.max(1, Math.min(6, Math.ceil(velocity * 1.5)));
+  
+    element.style.animation = 'none';
+    element.offsetHeight;
+    element.style.animation = `flip ${duration}s ${iterations} ease-in-out`;
+  })
+});
+
+// emailIcon.addEventListener("mouseenter", (e) => {
+//   lastMouseX = e.clientX;
+//   lastMouseY = e.clientY;
+//   lastMouseTime = Date.now();
+//   // emailIcon.classList.add("flip");
+// });
+// emailIcon.addEventListener('mouseleave', (e) => {
+//   const deltaX = e.clientX - lastMouseX;
+//   const deltaY = e.clientY - lastMouseY;
+//   const deltaTime = Date.now() - lastMouseTime;
+
+//   const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+//   const velocity = distance / deltaTime;
+
+//   const duration = Math.max(0.2, Math.min(1.75, 1 / velocity));
+//   const iterations = Math.max(1, Math.min(8, Math.ceil(velocity * 3)));
+
+//   emailIcon.style.animation = 'none';
+//   emailIcon.offsetHeight;
+//   emailIcon.style.animation = `flip ${duration}s ${iterations} ease-in-out`;
+// })
+
+
+// emailIcon.addEventListener("animationend", () => {
+//   emailIcon.classList.remove("flip");
+// });
 
 btnToggleTheme.addEventListener("click", () => {
   document.body.classList.toggle("dark-theme");
   themeIcon.classList.toggle("dark-theme");
   langIcon.classList.toggle("dark-theme");
-  highlight.classList.toggle('dark-theme');
+  highlight.classList.toggle("dark-theme");
 
   const currentIcon = window.getComputedStyle(themeIcon).backgroundImage;
 
