@@ -109,13 +109,13 @@ body.dark-theme {
 
 @font-face {
   font-family: Body;
-  src: url(fonts/Ranade-Light.woff2) format('woff2');
+  src: url(fonts/Ranade-Light.woff2) format("woff2");
   font-weight: normal;
 }
 
 @font-face {
   font-family: BodyMed;
-  src: url(fonts/Ranade-Medium.woff2) format('woff2');
+  src: url(fonts/Ranade-Medium.woff2) format("woff2");
   font-weight: bold;
 }
 
@@ -156,14 +156,15 @@ body.dark-theme .hamburger {
 }
 
 .pin-icon {
-  filter: invert(50%) sepia(9%) saturate(2226%) hue-rotate(17deg) brightness(101%) contrast(100%);
+  filter: invert(50%) sepia(9%) saturate(2226%) hue-rotate(17deg)
+    brightness(101%) contrast(100%);
 
   background-image: url(icons/pin.svg);
 }
 
 body.dark-theme .pin-icon {
   filter: invert(99%) sepia(0%) saturate(1306%) hue-rotate(56deg)
-  brightness(115%) contrast(100%);
+    brightness(115%) contrast(100%);
 }
 
 .external-link {
@@ -269,7 +270,13 @@ body.dark-theme .linkedin-icon {
 
 @keyframes flip {
   50% {
-    transform: rotateY(90deg)
+    transform: rotateY(90deg);
+  }
+}
+
+@keyframes shine {
+  100% {
+    left: 125%;
   }
 }
 
@@ -522,18 +529,33 @@ main section {
 }
 
 .wrapper::before {
-  top: 0px;
-  left: 0px;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(25deg);
+  z-index: 2;
+  pointer-events: none;
 }
 
-.wrapper::before,
+.wrapper:hover::before {
+  animation: shine 0.75s;
+}
+
 .wrapper::after {
   content: "";
   display: block;
   position: absolute;
   width: 100%;
   height: 100%;
-  
 }
 
 body.dark-theme .wrapper::after {
@@ -545,6 +567,7 @@ body.dark-theme .wrapper::after {
   scale: 0.9;
   translate: -15px -15px;
   transform: rotate(45deg);
+
 }
 
 .wrapper:hover .profile-picture-1 {
@@ -569,12 +592,19 @@ body.dark-theme .wrapper::after {
 /*** About ***/
 .about-section .title {
   transition: 0.1s ease-out;
-  text-shadow: none
 }
 
 .about-section:hover .title {
   transition: 0.1s ease-out;
-  /* text-shadow: 1px 1px 1px var(--theme-darker); */
+  scale: 1.2;
+}
+
+.about-section .title::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-color: 1px solid black;
 }
 
 .about-container {
@@ -647,19 +677,19 @@ body.dark-theme .project-card {
 
 .project-card:has(~ .project-card:hover) {
   opacity: 0.5;
-  filter: sepia(80%);
+  filter: sepia(80%) grayscale(50%);
   transition: opacity 0.3s, filter 0.3s translate 0.2s;
 }
 
 .project-card:hover ~ .project-card {
   opacity: 0.5;
-  filter: sepia(80%);
+  filter: sepia(80%) grayscale(50%);
   transition: opacity 0.3s, filter 0.3s translate 0.2s;
 }
 
 .project-image {
   transition: 0.25s ease-in-out;
-  filter:grayscale(0);
+  filter: grayscale(0);
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
 }
@@ -685,7 +715,7 @@ body.dark-theme .project-card {
 }
 
 /*** Contact ***/
-.contact-section .title{
+.contact-section .title {
   transition: 0.1s ease-out;
   text-shadow: none;
 }
