@@ -1,6 +1,7 @@
 export class Dropdown {
   constructor() {
     this.initialize();
+    this.addScrollListener();
   }
 
   initialize() {
@@ -11,6 +12,14 @@ export class Dropdown {
       } else {
         this.hideAllDropdowns();
       }
+    });
+  }
+
+  addScrollListener() {
+    let scrollTimeout;
+    window.addEventListener('scroll', () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => this.hideAllDropdowns(), 150);
     });
   }
 
@@ -33,7 +42,6 @@ export class Dropdown {
       menu.setAttribute('aria-expanded', false);
     });
   }
-  
 }
 
 document.addEventListener("DOMContentLoaded", () => new Dropdown());
