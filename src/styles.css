@@ -497,8 +497,14 @@ main section {
 }
 
 /*** About ***/
+.about-section .title {
+  transition: 0.1s ease-out;
+  text-shadow: none
+}
+
 .about-section:hover .title {
-  font-weight: bold;
+  transition: 0.1s ease-out;
+  text-shadow: 1px 1px 2px var(--theme-darker);
 }
 
 .about-container {
@@ -526,9 +532,12 @@ main section {
 /*** Projects ***/
 .projects-section {
   background-color: var(--neutral-lighter);
+  transition: 0.1s ease-in-out;
+  text-shadow: none;
 }
 .projects-section:hover .title {
-  font-weight: bold;
+  transition: 0.1s ease-in-out;
+  text-shadow: 1px 1px 2px var(--theme-darker);
 }
 
 .projects-container {
@@ -540,7 +549,7 @@ main section {
 }
 
 .project-card {
-  transition: 0.15s ease-in-out;
+  transition: 0.15s ease-in;
   border-radius: 6px;
   display: flex;
   flex-direction: column;
@@ -555,20 +564,20 @@ main section {
 }
 
 .project-card:hover {
-  transition: 0.15s ease-in-out;
+  transition: 0.2s ease-out;
   translate: 0 -10px;
 }
 
 .project-card:has(~ .project-card:hover) {
   opacity: 0.5;
   filter: grayscale(50%);
-  transition: opacity 0.3s, filter 0.3s;
+  transition: opacity 0.3s, filter 0.3s translate 0.2s;
 }
 
 .project-card:hover ~ .project-card {
   opacity: 0.5;
   filter: grayscale(50%);
-  transition: opacity 0.3s, filter 0.3s;
+  transition: opacity 0.3s, filter 0.3s translate 0.2s;
 }
 
 .project-image {
@@ -599,8 +608,14 @@ main section {
 }
 
 /*** Contact ***/
+.contact-section .title{
+  transition: 0.1s ease-out;
+  text-shadow: none;
+}
+
 .contact-section:hover .title {
-  font-weight: bold;
+  transition: 0.1s ease-out;
+  text-shadow: 1px 1px 2px var(--theme-darker);
 }
 
 .contact-container {
