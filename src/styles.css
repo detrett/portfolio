@@ -326,6 +326,30 @@ h1 {
   flex: 2;
 }
 
+.hover-lines {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 12px;
+}
+
+.hover-lines::before,
+.hover-lines::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background-color: var(--black);
+  width: 0;
+  transition: width 0.3s ease;
+}
+.hover-lines::before {
+  right: 100%;
+}
+.hover-lines::after {
+  left: 100%;
+}
+
 .header-container,
 .hero-container,
 .about-container,
@@ -573,7 +597,6 @@ body.dark-theme .wrapper::after {
   scale: 0.9;
   translate: -15px -15px;
   transform: rotate(45deg);
-
 }
 
 .wrapper:hover .shine {
@@ -627,6 +650,11 @@ body.dark-theme .wrapper::after {
   scale: 1.2;
 }
 
+.about-section:hover .hover-lines::before,
+.about-section:hover .hover-lines::after {
+  width: 60px;
+}
+
 .about-section .title::after {
   content: "";
   display: block;
@@ -642,13 +670,26 @@ body.dark-theme .wrapper::after {
   color: var(--black);
 }
 
+.portrait-wrapper {
+  flex: 4;
+}
+
+.profile-picture-2 {
+  width: 80%;
+  margin: 0 auto;
+  height: auto;
+  display: block;
+}
+
 .description-subcontainer {
   display: flex;
   gap: 2rem;
 }
 
 .about-description {
-  flex: 3;
+  flex: 6;
+  line-height: 1.5;
+  align-self: center;
 }
 
 .location-subcontainer {
@@ -663,10 +704,16 @@ body.dark-theme .wrapper::after {
   background-color: var(--neutral-lighter);
   transition: 0.1s ease-in-out;
   text-shadow: none;
+  padding-block-start: 4rem;
 }
 .projects-section:hover .title {
   transition: 0.1s ease-in-out;
-  /* text-shadow: 1px 1px 1px var(--theme-darker); */
+  transform: scale(1.2);
+}
+
+.projects-section:hover .hover-lines::before,
+.projects-section:hover .hover-lines::after {
+  width: 60px;
 }
 
 .projects-container {
@@ -735,6 +782,7 @@ body.dark-theme .project-card {
 .project-description {
   padding: 1rem;
   padding-block-end: 3rem;
+  line-height: 1.5;
 }
 
 .project-links {
@@ -746,11 +794,17 @@ body.dark-theme .project-card {
 .contact-section .title {
   transition: 0.1s ease-out;
   text-shadow: none;
+  padding-start: 4rem;
 }
 
 .contact-section:hover .title {
   transition: 0.1s ease-out;
-  /* text-shadow: 1px 1px 1px var(--theme-darker); */
+  transform: scale(1.2);
+}
+
+.contact-section:hover .hover-lines::before,
+.contact-section:hover .hover-lines::after {
+  width: 60px;
 }
 
 .contact-container {
@@ -784,6 +838,7 @@ body.dark-theme .project-card {
 /** Footer **/
 footer {
   padding: 1rem;
+  padding-block-start: 2rem;
   text-align: center;
   color: var(--black);
   background-color: var(--neutral-lighter-alt);
@@ -802,6 +857,11 @@ footer {
   .contact-container {
     width: 85%;
     margin: 0 auto;
+  }
+
+  .hover-lines::before,
+  .hover-lines::after {
+    width: 0px !important;
   }
 
   /** Header **/
