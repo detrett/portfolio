@@ -528,7 +528,75 @@ main section {
   z-index: 0;
 }
 
-.wrapper::before {
+/* .wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(25deg);
+  z-index: 2;
+  pointer-events: none;
+} */
+
+/* .wrapper:hover::before {
+  animation: shine 0.75s;
+} */
+
+.wrapper::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: 0.2s ease-in-out;
+  scale: 0.8;
+  left: 15px;
+  top: 15px;
+  background-color: #ffef5cbd;
+  z-index: -1;
+}
+
+body.dark-theme .wrapper::after {
+  background-color: #fff59de1;
+}
+
+.wrapper:hover::after {
+  transition: 0.2s ease-in-out;
+  scale: 0.9;
+  translate: -15px -15px;
+  transform: rotate(45deg);
+
+}
+
+.wrapper:hover .shine {
+  transition: 0.2s ease-in-out;
+  scale: 1.1;
+}
+
+.profile-picture-1 {
+  transition: 0.2s ease-in-out;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.shine {
+  transition: 0.2s ease-in-out;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  transform: scale(0.8);
+}
+
+.shine::before {
   content: "";
   position: absolute;
   top: 0;
@@ -545,48 +613,8 @@ main section {
   z-index: 2;
   pointer-events: none;
 }
-
-.wrapper:hover::before {
+.shine:hover::before {
   animation: shine 0.75s;
-}
-
-.wrapper::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-body.dark-theme .wrapper::after {
-  background-color: #fff59de1;
-}
-
-.wrapper:hover::after {
-  transition: 0.2s ease-in-out;
-  scale: 0.9;
-  translate: -15px -15px;
-  transform: rotate(45deg);
-
-}
-
-.wrapper:hover .profile-picture-1 {
-  transition: 0.2s ease-in-out;
-  scale: 0.9;
-}
-
-.wrapper::after {
-  transition: 0.2s ease-in-out;
-  scale: 0.8;
-  left: 15px;
-  top: 15px;
-  background-color: #ffef5cbd;
-  z-index: -1;
-}
-
-.profile-picture-1 {
-  transition: 0.2s ease-in-out;
-  scale: 0.8;
 }
 
 /*** About ***/
@@ -671,8 +699,8 @@ body.dark-theme .project-card {
 }
 
 .project-card:hover {
-  transition: 0.2s ease-out;
-  translate: 0 -10px;
+  transition: 0.15s ease-out;
+  translate: 0 -8px;
 }
 
 .project-card:has(~ .project-card:hover) {
