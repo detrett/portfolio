@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alan Blanco</title>
+  <script defer src="main.js"></script></head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <nav class="nav-menu">
+          <button
+            aria-label="Toggle navigation menu"
+            class="nav-toggle dropdown-action"
+            aria-expanded="false"
+          >
+            <span class="hamburger icon"></span>
+          </button>
+          <ul class="nav-list">
+            <li class="nav-list-item">
+              <a href="#about" aria-current="page" tabindex="0">About</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#projects" tabindex="0">Projects</a>
+            </li>
+            <li class="nav-list-item">
+              <a href="#contact" tabindex="0">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="btn-list">
+          <li>
+            <button aria-label="Toggle theme" class="btn-toggle-theme">
+              <span class="theme-icon icon"></span>
+            </button>
+          </li>
+          <li>
+            <div class="dropdown">
+              <button class="dropdown-action lang-btn">
+                <span class="lang-icon icon"></span>
+              </button>
+              <ul class="dropdown-menu lang-list" aria-expanded="false">
+                <li class="dropdown-item"><a href="#">English</a></li>
+                <li class="dropdown-item"><a href="#">Español</a></li>
+                <li class="dropdown-item"><a href="#">Norsk</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="hero-section" tabindex="0">
+        <div class="hero-container">
+          <div class="hero-description">
+            <p>Hello! My name is</p>
+            <div class="highlight">
+              <h1 class="name">Alan Blanco</h1>
+            </div>
+            <p>I am a fullstack developer based in Oslo</p>
+          </div>
+          <div class="pp-container">
+            <div class="wrapper">
+              <div class="shine">
+                <img src="64292bbf12026a146639.jpg" alt="" class="profile-picture-1" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about-section" tabindex="0">
+        <h2 class="title"><span class="hover-lines">About me</span></h2>
+        <div class="about-container">
+          <div class="description-subcontainer">
+            <div class="portrait-wrapper">
+              <img src="01859b0294a798232a08.jpg" alt="" class="profile-picture-2"/>
+            </div>
+            <div class="about-description">
+              <p>
+                I am a graduate in Anvendt datateknologi in Oslomet. During my
+                time as a student I developed a strong foundation in data
+                technology and its practical applications. My studies have
+                equipped me with skills in programming, data analysis, UX/user
+                design, and software development
+              </p>
+              <br />
+              <p>
+                I am passionate about becoming a fullstack developer to create
+                both beautiful and functional products. But whether it is
+                through web development, app development, or collaborative
+                projects, I am eager to contribute to the tech community with
+                quality and creativity as I continue my path of continuous
+                learning.
+              </p>
+              <br />
+              <p>
+                I am actively looking for new opportunities, my inbox is always
+                open, so whether you have a question or just want to say hi,
+                don't hesitate to get in touch!
+              </p>
+            </div>
+          </div>
+          <div class="location-subcontainer">
+            <span class="icon pin-icon"></span>
+            <p>Oslo, Norway / Cádiz, Spain</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects-section" tabindex="0">
+        <h2 class="title"><span class="hover-lines">Projects</span></h2>
+        <div class="projects-container">
+          <div class="project-card">
+            <img class="project-image" src="e3bb51d0174b2f03ef80.png" alt="" />
+            <div class="project-title">
+              <h3>Weather forecast</h3>
+              <div class="project-links">
+                <a
+                  href="https://github.com/detrett/weather-app"
+                  title="Github repository"
+                  ><span class="icon github-small"></span
+                ></a>
+                <a
+                  href="https://detrett.github.io/weather-app/"
+                  target="_blank"
+                  title="Open demo in a new tab"
+                  ><span class="icon external-link"></span
+                ></a>
+              </div>
+            </div>
+            <p class="project-description">
+              A dynamic web application that uses a weather API and geolocation
+              API to display the weather forecast.
+            </p>
+          </div>
+
+          <div class="project-card">
+            <img class="project-image" src="5fddd173aeb3915af3cd.png" alt="" />
+            <div class="project-title">
+              <h3>Battleships game</h3>
+              <div class="project-links">
+                <a
+                  href="https://github.com/detrett/battleships"
+                  title="Github repository"
+                  ><span class="icon github-small"></span
+                ></a>
+                <a
+                  href="https://detrett.github.io/battleships/"
+                  target="_blank"
+                  title="Open demo in a new tab"
+                  ><span class="icon external-link"></span
+                ></a>
+              </div>
+            </div>
+            <p class="project-description">
+              The classic game of battleships against an AI made using
+              Javascript
+            </p>
+          </div>
+
+          <div class="project-card">
+            <img class="project-image" src="1f9eb8a9c5611e312b30.png" alt="" />
+            <div class="project-title">
+              <h3>To-do list</h3>
+              <div class="project-links">
+                <a
+                  href="https://github.com/detrett/to-do-list"
+                  title="Github repository"
+                  ><span class="icon github-small"></span
+                ></a>
+                <a
+                  href="https://detrett.github.io/to-do-list/"
+                  target="_blank"
+                  title="Open demo in a new tab"
+                  ><span class="icon external-link"></span
+                ></a>
+              </div>
+            </div>
+            <p class="project-description">
+              A simple todo-list implementation on the web.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section" tabindex="0">
+        <h2 class="title"><span class="hover-lines">Get in touch</span></h2>
+        <div class="contact-container">
+          <div class="contact-email contact-subcontainer">
+            <div class="icon mail-icon spinning-icon"></div>
+            <div class="contact-info">
+              <h4>Email</h4>
+              <a href="mailto:alanalquezar@gmail.com">alanalquezar@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-github contact-subcontainer">
+            <span class="icon github-icon spinning-icon"></span>
+            <div class="contact-info">
+              <h4>Github</h4>
+              <a href="#">detrett</a>
+            </div>
+          </div>
+          <div class="contact-linkedin contact-subcontainer">
+            <span class="icon linkedin-icon spinning-icon"></span>
+            <div class="contact-info">
+              <h4>LinkedIn</h4>
+              <a href="#">Alan Blanco</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>© 2024 Alan Blanco</p>
+    </footer>
+  </body>
+</html>
